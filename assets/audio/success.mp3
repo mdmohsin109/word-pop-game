@@ -1,0 +1,13 @@
+// This is a simple placeholder for the success sound
+// In a real implementation, you would use actual sound files
+
+// Audio data URL for a simple "success" sound
+const successSoundData = 'data:audio/mp3;base64,SUQzAwAAAAA3eFRJVDIAAAAfAAADRWZmZWN0cyBTb3VuZDogU3VjY2VzcyBGYW5mYXJlAFRZRVIAAAAFAAAAMjAyMwBUQ09OAAAADwAAAFNvdW5kIEVmZmVjdHM=';
+
+// Create audio element
+const successSound = new Audio(successSoundData);
+
+// Export if needed
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { successSound };
+}

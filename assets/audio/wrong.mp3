@@ -1,0 +1,13 @@
+// This is a simple placeholder for the wrong sound
+// In a real implementation, you would use actual sound files
+
+// Audio data URL for a simple "wrong" sound
+const wrongSoundData = 'data:audio/mp3;base64,SUQzAwAAAAArcFRJVDIAAAAZAAADRWZmZWN0cyBTb3VuZDogRXJyb3IgVG9uZQBUWUVSAAAABQAAADIwMjMAVENPTgAAAA8AAABTY3VuZCBFZmZlY3Rz';
+
+// Create audio element
+const wrongSound = new Audio(wrongSoundData);
+
+// Export if needed
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { wrongSound };
+}

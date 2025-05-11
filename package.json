@@ -1,0 +1,37 @@
+{
+  "name": "word-pop-game",
+  "version": "1.0.0",
+  "description": "An educational vocabulary game for elementary school children",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "dev": "npx http-server -o",
+    "screenshots": "open SCREENSHOT_INSTRUCTIONS.md",
+    "screenshot-templates": "open screenshot-templates.html",
+    "take-screenshots": "./take_screenshots.sh",
+    "deploy": "zsh setup_github.sh",
+    "open-cover": "open cover-template.html",
+    "checklist": "open PROJECT_CHECKLIST.md",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "game",
+    "kids",
+    "vocabulary",
+    "reading",
+    "phonics"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/word-pop-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/word-pop-game/issues"
+  },
+  "homepage": "https://github.com/yourusername/word-pop-game#readme"
+}

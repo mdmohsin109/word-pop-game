@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Pop! - Fun Word Learning Game</title>
+    <meta name="description" content="An interactive educational game for elementary school children to practice word patterns and phonics through engaging bubble-popping gameplay.">
+    <meta name="keywords" content="educational game, phonics, word patterns, kids game, vocabulary, reading skills">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Word Pop! - Educational Vocabulary Game">
+    <meta property="og:description" content="Help kids learn phonics patterns with this fun bubble-popping word game!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/word-pop-game/">
+    <meta property="og:image" content="https://yourusername.github.io/word-pop-game/screenshots/gameplay.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Word Pop! - Educational Vocabulary Game">
+    <meta name="twitter:description" content="Help kids learn phonics patterns with this fun bubble-popping word game!">
+    <meta name="twitter:image" content="https://yourusername.github.io/word-pop-game/screenshots/gameplay.png">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1 class="game-title">Word Pop!</h1>
+            <div class="game-stats">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="time">Time: <span id="timer">60</span>s</div>
+                <div class="level">Unit: <span id="current-unit">1</span></div>
+                <div class="difficulty">Difficulty: <span id="current-difficulty">Medium</span></div>
+            </div>
+        </header>
+
+        <div class="game-area" id="game-area">
+            <!-- Bubbles will be dynamically created here -->
+        </div>
+
+        <div class="game-controls">
+            <div class="prompt-area">
+                <h2>Find this word pattern:</h2>
+                <div class="current-pattern" id="current-pattern">a_e</div>
+                <div class="example-words" id="example-words">Example: tape, cape</div>
+                <div class="pattern-progress">
+                    <span id="pattern-count">Pattern 1/3</span>
+                </div>
+            </div>
+            <div class="button-group">
+                <button id="start-btn" class="btn start-btn">Start Game</button>
+                <button id="next-unit-btn" class="btn next-unit-btn">Next Unit</button>
+                <button id="settings-btn" class="btn settings-btn">⚙️ Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="start-modal">
+        <div class="modal-content">
+            <h2>Welcome to Word Pop!</h2>
+            <p>Tap the word bubbles that match the pattern before they float away!</p>
+            
+            <div class="settings-container">
+                <div class="setting-group">
+                    <label for="difficulty-select">Choose Difficulty:</label>
+                    <select id="difficulty-select" class="game-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="unit-select">Choose Unit:</label>
+                    <select id="unit-select" class="game-select">
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            
+            <p>Ready to have fun with words?</p>
+            <button id="modal-start-btn" class="btn start-btn">Let's Play!</button>
+        </div>
+    </div>
+
+    <div class="modal" id="game-over-modal">
+        <div class="modal-content">
+            <h2>Great Job!</h2>
+            <p>Your score: <span id="final-score">0</span></p>
+            <p>Words popped: <span id="words-popped">0</span></p>
+            <button id="play-again-btn" class="btn start-btn">Play Again</button>
+            <button id="show-settings-btn" class="btn settings-btn">⚙️ Settings</button>
+        </div>
+    </div>
+    
+    <div class="modal" id="settings-modal">
+        <div class="modal-content">
+            <h2>Game Settings</h2>
+            <div class="settings-container">
+                <div class="setting-group">
+                    <label for="settings-difficulty-select">Difficulty:</label>
+                    <select id="settings-difficulty-select" class="game-select">
+                        <option value="easy">Easy</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                
+                <div class="setting-group">
+                    <label for="settings-unit-select">Unit:</label>
+                    <select id="settings-unit-select" class="game-select">
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="difficulty-info">
+                    <p><strong>Easy:</strong> Slower bubbles, more time</p>
+                    <p><strong>Medium:</strong> Standard speed and time</p>
+                    <p><strong>Hard:</strong> Faster bubbles, less time</p>
+                    <p><strong>Expert:</strong> Very fast, minimal time!</p>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button id="save-settings-btn" class="btn start-btn">Save Settings</button>
+                <button id="close-settings-btn" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio is handled in JavaScript -->
+
+    <script src="assets/data/level3Data.js"></script>
+    <script src="assets/js/game.js"></script>
+</body>
+</html>

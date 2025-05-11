@@ -1,0 +1,13 @@
+// This is a simple placeholder for the pop sound
+// In a real implementation, you would use actual sound files
+
+// Audio data URL for a simple "pop" sound
+const popSoundData = 'data:audio/mp3;base64,SUQzAwAAAAAfdlRJVDIAAAATAAADRWZmZWN0cyBTb3VuZDogUG9wAFRZRVIAAAAFAAAAMjAyMwBUQ09OAAAADwAAAFNvdW5kIEVmZmVjdHM=';
+
+// Create audio element
+const popSound = new Audio(popSoundData);
+
+// Export if needed
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { popSound };
+}
