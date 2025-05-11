@@ -70,22 +70,34 @@ echo "NOTE: Make sure you've created the repository 'word-pop-game' on GitHub fi
 echo "Have you created the repository on GitHub? (y/n): "
 read repo_created
 if [[ $repo_created == "y" || $repo_created == "Y" ]]; then
-  git push -u origin main
+  if git push -u origin main; then
+    echo "✅ Success! Your code has been pushed to GitHub."
+  else
+    echo "❌ Failed to push to GitHub. Possible reasons:"
+    echo "   - The repository may not exist yet on GitHub"
+    echo "   - There may be network issues"
+    echo "   - You might need to authenticate with GitHub"
+    echo ""
+    echo "You can try running this command manually later:"
+    echo "   git push -u origin main"
+    exit 1
+  fi
 else
   echo "Please create the repository on GitHub first and then run: git push -u origin main"
   exit 1
 fi
 
 # Step 10: Instructions for GitHub Pages
-echo "✅ Success! Your code has been pushed to GitHub."
-echo ""
-echo "🌐 Next steps to set up GitHub Pages:"
-echo "1. Go to https://github.com/$github_username/word-pop-game/settings/pages"
-echo "2. Under 'Source', select 'main' branch and root folder"
-echo "3. Click 'Save'"
-echo "4. Wait a few minutes for your site to be published"
-echo "5. Update the README.md with your GitHub Pages URL"
-echo ""
-echo "🎮 Your game will be available at: https://$github_username.github.io/word-pop-game"
-echo ""
-echo "Done! 🎉"
+if [[ $? -eq 0 ]]; then
+  echo ""
+  echo "🌐 Next steps to set up GitHub Pages:"
+  echo "1. Go to https://github.com/$github_username/word-pop-game/settings/pages"
+  echo "2. Under 'Source', select 'main' branch and root folder"
+  echo "3. Click 'Save'"
+  echo "4. Wait a few minutes for your site to be published"
+  echo "5. Update the README.md with your GitHub Pages URL"
+  echo ""
+  echo "🎮 Your game will be available at: https://$github_username.github.io/word-pop-game"
+  echo ""
+  echo "Done! 🎉"
+fi

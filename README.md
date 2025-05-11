@@ -22,12 +22,12 @@ Word Pop! is a fun and engaging educational game designed to help elementary sch
 ## 🖥️ Installation and Setup
 
 **Option 1: Play Online**
-- Visit the [Live Demo](https://yourusername.github.io/word-pop-game) *(Update with your actual GitHub Pages URL once deployed)*
+- Visit the [Live Demo](https://mdmohsin109.github.io/word-pop-game) *(Update with your actual GitHub Pages URL once deployed)*
 
 **Option 2: Local Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/word-pop-game.git
+   git clone https://github.com/mdmohsin109/word-pop-game.git
    ```
 2. Navigate to the project folder:
    ```bash
@@ -92,7 +92,7 @@ This educational game was developed with a focus on both learning outcomes and e
 
 Contributions are welcome! Whether you're fixing bugs, improving the documentation, or proposing new features, your help is appreciated.
 
-1. Check out the [issues page](https://github.com/yourusername/word-pop-game/issues) for open issues
+1. Check out the [issues page](https://github.com/mdmohsin109/word-pop-game/issues) for open issues
 2. See our [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines
 3. Review the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community guidelines
 
@@ -129,7 +129,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-Created by [Your Name](https://github.com/yourusername) - *Educational Game Developer*
+Created by [MD MOHSIN](https://github.com/mdmohsin109) - *Educational Game Developer*
 
 ---
 
