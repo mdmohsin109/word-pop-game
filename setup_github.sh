@@ -67,7 +67,8 @@ fi
 # Step 9: Push to GitHub
 echo "☁️ Pushing code to GitHub..."
 echo "NOTE: Make sure you've created the repository 'word-pop-game' on GitHub first!"
-read -p "Have you created the repository on GitHub? (y/n): " repo_created
+echo "Have you created the repository on GitHub? (y/n): "
+read repo_created
 if [[ $repo_created == "y" || $repo_created == "Y" ]]; then
   git push -u origin main
 else
