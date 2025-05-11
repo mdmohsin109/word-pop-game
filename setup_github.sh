@@ -56,11 +56,24 @@ echo "Enter your GitHub username:"
 read github_username
 
 echo "🌐 Connecting to remote repository..."
-git remote add origin https://github.com/$github_username/word-pop-game.git
+# Check if remote already exists
+if git remote | grep -q "origin"; then
+  echo "Remote 'origin' already exists. Updating it..."
+  git remote set-url origin https://github.com/$github_username/word-pop-game.git
+else
+  git remote add origin https://github.com/$github_username/word-pop-game.git
+fi
 
 # Step 9: Push to GitHub
 echo "☁️ Pushing code to GitHub..."
-git push -u origin main
+echo "NOTE: Make sure you've created the repository 'word-pop-game' on GitHub first!"
+read -p "Have you created the repository on GitHub? (y/n): " repo_created
+if [[ $repo_created == "y" || $repo_created == "Y" ]]; then
+  git push -u origin main
+else
+  echo "Please create the repository on GitHub first and then run: git push -u origin main"
+  exit 1
+fi
 
 # Step 10: Instructions for GitHub Pages
 echo "✅ Success! Your code has been pushed to GitHub."
